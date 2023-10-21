@@ -1,0 +1,139 @@
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --font-size: 18px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    position: relative;
+    background-color: var(--dark-cyan);
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url('../img/bg-pattern-top.svg');
+    top: 0;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 1000px;
+    background-size: cover;
+    z-index: -1;
+}
+
+body::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url('../img/bg-pattern-bottom.svg');
+    bottom: 0;
+    transform: translate(50%, 50%);
+    width: 1000px;
+    height: 1000px;
+    background-size: cover;
+    z-index: -1;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 40px 50px hsla(229, 23%, 23%, 0.3);
+
+}
+
+.header {
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+}
+
+.avatar {
+    width: 90px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    position: absolute;
+    bottom: -60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.content {
+    margin: 50px 0 35px;
+}
+
+.name,
+.city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city,
+.name span {
+    color: var(--dark-gray);
+}
+
+.name h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--very-dark-desaturated-blue);
+    margin-right: 9px;
+}
+
+.city {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.card hr {
+    border: 1px solid hsla(0, 0%, 59%, 0.2);
+}
+
+.state {
+    display: flex;
+    justify-content: space-around;
+    margin: 25px 20px;
+}
+
+.state span {
+    display: flex;
+    justify-content: center;
+}
+
+.state span:nth-child(2n+1) {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.state span:nth-child(2n) {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: var(--dark-gray);
+}
